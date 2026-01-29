@@ -37,6 +37,10 @@
             android:icon="@drawable/ic_flag"
             android:title="Secure Flag Bypass" />
         <item
+            android:id="@+id/nav_filter_touches"
+            android:icon="@drawable/ic_flag"
+            android:title="Filter Touches" />
+        <item
             android:id="@+id/nav_deep_link_exploitation"
             android:icon="@drawable/ic_deep_link"
             android:title="Deep Link Exploitation" />
@@ -44,6 +48,10 @@
             android:id="@+id/nav_insecure_broadcast_receiver"
             android:icon="@drawable/ic_broadcast"
             android:title="Insecure Broadcast Receiver" />
+        <item
+            android:id="@+id/nav_sticky_broadcast"
+            android:icon="@drawable/ic_broadcast"
+            android:title="Sticky Broadcast" />
         <item
             android:id="@+id/nav_vulnerable_web_view"
             android:icon="@drawable/ic_webview"

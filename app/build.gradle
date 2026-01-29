@@ -10,7 +10,7 @@ android {
 
     defaultConfig {
         applicationId "infosecadventures.allsafe"
-        minSdkVersion 23
+        minSdkVersion 19
         targetSdk 35
         versionCode 6
         versionName "1.6"
