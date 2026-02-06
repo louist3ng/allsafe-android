@@ -26,6 +26,20 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+        releaseLight {
+            initWith release
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'),
+                    'proguard-light.pro'
+        }
+        releaseHeavy {
+            initWith release
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'),
+                    'proguard-heavy.pro'
+        }
     }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_18
