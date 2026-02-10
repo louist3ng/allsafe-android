@@ -63,6 +63,12 @@ android {
     }
 
     ndkVersion = '25.1.8937393'
+
+//    applicationVariants.all { variant ->
+//        variant.javaCompileProvider.get().doLast {
+//            runAllatori(variant)
+//        }
+//    }
 }
 
 dependencies {
@@ -85,3 +91,40 @@ dependencies {
     implementation "com.squareup.okhttp3:okhttp:4.9.0"
     implementation 'com.scottyab:rootbeer-lib:0.0.8'
 }
+
+//def runAllatori(variant) {
+//    println "Path to allatori.jar should be $rootDir/allatori/allatori.jar"
+//    println "Path to allatori.xml configuration file should be $projectDir/allatori.xml"
+//
+//    String classesRoot = variant.javaCompileProvider.get().destinationDirectory.get()
+//    String kotlinRoot = "${buildDir}/tmp/kotlin-classes/${variant.name}"
+//
+//    copy {
+//        from "$projectDir/allatori.xml"
+//        into "$classesRoot/../"
+//        expand(classesRoot: classesRoot,
+//                kotlinRoot: kotlinRoot,
+//                androidJar: "${android.sdkDirectory}/platforms/${android.compileSdkVersion}/android.jar",
+//                classpathJars: variant.javaCompileProvider.get().classpath.asPath,
+//                logFile: 'allatori-log.xml')
+//        rename('allatori.xml', 'allatori-expanded.xml')
+//    }
+//
+//    new File("$classesRoot-obfuscated").deleteDir()
+//    // Kotlin support
+//    new File("$kotlinRoot-obfuscated").deleteDir()
+//
+//    javaexec {
+//        mainClass = 'com.allatori.Obfuscate'
+//        classpath = files("$rootDir/allatori/allatori.jar")
+//        args "$classesRoot/../allatori-expanded.xml"
+//    }
+//
+//    new File(classesRoot).deleteDir()
+//    new File("$classesRoot-obfuscated").renameTo(new File(classesRoot))
+//    // Kotlin support
+//    if (new File("$kotlinRoot-obfuscated").exists()) {
+//        new File(kotlinRoot).deleteDir()
+//        new File("$kotlinRoot-obfuscated").renameTo(new File(kotlinRoot))
+//    }
+//}
