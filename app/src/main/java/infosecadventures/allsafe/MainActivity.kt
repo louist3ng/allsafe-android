@@ -36,7 +36,6 @@ class MainActivity : AppCompatActivity() {
                 R.id.nav_deep_link_exploitation,
                 R.id.nav_insecure_broadcast_receiver,
                 R.id.nav_sticky_broadcast,
-                R.id.nav_weak_cryptography,
                 R.id.nav_insecure_service,
                 R.id.nav_object_serialization,
                 R.id.nav_insecure_providers,
