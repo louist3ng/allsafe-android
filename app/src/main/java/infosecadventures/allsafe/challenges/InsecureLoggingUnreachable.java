@@ -38,6 +38,8 @@ public class InsecureLoggingUnreachable extends Fragment {
             }
             return false;
         });
+        // Call unreachable code branch for reachability analysis testing
+        unreachableCodeBranch();
         return view;
     }
 
