@@ -80,6 +80,22 @@
             </intent-filter>
         </receiver>
 
+        <receiver
+            android:name=".challenges.ReachableBroadcastReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="infosecadventures.allsafe.action.REACHABLE_TEST" />
+            </intent-filter>
+        </receiver>
+
+        <receiver
+            android:name=".challenges.UnreachableBroadcastReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="infosecadventures.allsafe.action.UNREACHABLE_TEST" />
+            </intent-filter>
+        </receiver>
+
         <service
             android:name=".challenges.RecorderService"
             android:enabled="true"

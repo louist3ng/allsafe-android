@@ -1,5 +1,6 @@
 package infosecadventures.allsafe
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
@@ -56,6 +57,12 @@ class MainActivity : AppCompatActivity() {
         val navController = Navigation.findNavController(this, R.id.nav_host_fragment)
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration!!)
         NavigationUI.setupWithNavController(navigationView, navController)
+        
+        // Send reachable broadcast for the ReachableBroadcastReceiver
+        // This broadcast includes a sensitive token that will be logged, making the sink reachable
+        val reachableIntent = Intent("infosecadventures.allsafe.action.REACHABLE_TEST")
+        reachableIntent.putExtra("token", "SECRET_TOKEN_ABC123_XYZ789")
+        sendBroadcast(reachableIntent)
     }
 
     override fun onSupportNavigateUp(): Boolean {
