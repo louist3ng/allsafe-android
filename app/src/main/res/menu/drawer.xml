@@ -9,6 +9,10 @@
             android:icon="@drawable/ic_logging"
             android:title="Insecure Logging" />
         <item
+            android:id="@+id/nav_insecure_logging_unreachable"
+            android:icon="@drawable/ic_logging"
+            android:title="Insecure Logging Unreachable" />
+        <item
             android:id="@+id/nav_hardcoded_credentials"
             android:icon="@drawable/ic_creds"
             android:title="Hardcoded Credentials" />

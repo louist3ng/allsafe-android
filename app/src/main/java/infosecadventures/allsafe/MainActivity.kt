@@ -29,6 +29,7 @@ class MainActivity : AppCompatActivity() {
         mAppBarConfiguration = AppBarConfiguration.Builder(
                 R.id.nav_main,
                 R.id.nav_insecure_logging,
+                R.id.nav_insecure_logging_unreachable,
                 R.id.nav_hardcoded_credentials,
                 R.id.nav_firebase_database,
                 R.id.nav_insecure_shared_preferences,
