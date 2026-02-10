@@ -49,6 +49,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.nav_arbitrary_code_execution,
                 R.id.nav_smali_patch,
                 R.id.nav_native_library,
+                R.id.nav_vulnerable_webview_handlers,
                 R.id.nav_about)
                 .setOpenableLayout(drawer)
                 .build()

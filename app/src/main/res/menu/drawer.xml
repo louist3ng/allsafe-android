@@ -93,6 +93,10 @@
             android:icon="@drawable/ic_smali"
             android:title="Smali Patch" />
         <item
+            android:id="@+id/nav_vulnerable_webview_handlers"
+            android:icon="@drawable/ic_webview"
+            android:title="Vulnerable WebView Handlers" />
+        <item
             android:id="@+id/nav_about"
             android:icon="@drawable/ic_about"
             android:title="About" />
